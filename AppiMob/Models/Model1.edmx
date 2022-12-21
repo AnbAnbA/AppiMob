@@ -1,0 +1,90 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="Хранилище PBykovaOsoznatorModel" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="OsoznMain">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" />
+          <Property Name="Cel" Type="nvarchar(max)" />
+          <Property Name="DRrazum" Type="nvarchar" MaxLength="20" />
+          <Property Name="Prostr" Type="nvarchar" MaxLength="50" />
+          <Property Name="Ocenkaemotion" Type="int" Nullable="false" />
+          <Property Name="Emotion" Type="nvarchar" MaxLength="50" />
+          <Property Name="Do" Type="nvarchar(max)" />
+          <Property Name="Think" Type="nvarchar(max)" />
+          <Property Name="Time" Type="nvarchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityContainer Name="Хранилище PBykovaOsoznatorModelContainer">
+          <EntitySet Name="OsoznMain" EntityType="Self.OsoznMain" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="PBykovaOsoznatorModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="Entities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="OsoznMain" EntityType="PBykovaOsoznatorModel.OsoznMain" />
+        </EntityContainer>
+        <EntityType Name="OsoznMain">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" />
+          <Property Name="Cel" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="DRrazum" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="Prostr" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Ocenkaemotion" Type="Int32" Nullable="false" />
+          <Property Name="Emotion" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Do" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Think" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Time" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="Хранилище PBykovaOsoznatorModelContainer" CdmEntityContainer="Entities">
+          <EntitySetMapping Name="OsoznMain">
+            <EntityTypeMapping TypeName="PBykovaOsoznatorModel.OsoznMain">
+              <MappingFragment StoreEntitySet="OsoznMain">
+                <ScalarProperty Name="Time" ColumnName="Time" />
+                <ScalarProperty Name="Think" ColumnName="Think" />
+                <ScalarProperty Name="Do" ColumnName="Do" />
+                <ScalarProperty Name="Emotion" ColumnName="Emotion" />
+                <ScalarProperty Name="Ocenkaemotion" ColumnName="Ocenkaemotion" />
+                <ScalarProperty Name="Prostr" ColumnName="Prostr" />
+                <ScalarProperty Name="DRrazum" ColumnName="DRrazum" />
+                <ScalarProperty Name="Cel" ColumnName="Cel" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="Нет" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
